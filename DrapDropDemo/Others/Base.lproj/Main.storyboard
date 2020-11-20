@@ -720,7 +720,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="bcW-9j-JzG">
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="bcW-9j-JzG" customClass="DestinationView">
                                         <rect key="frame" x="30" y="30" width="557" height="340"/>
                                     </customView>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="7TE-kZ-BNw" customClass="UnderView">

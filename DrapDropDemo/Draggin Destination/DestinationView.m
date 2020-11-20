@@ -124,11 +124,11 @@
 //}
 
 
-- (NSView *)hitTest:(NSPoint)point {
-    [super hitTest:point];
-    
-    return nil;
-}
+//- (NSView *)hitTest:(NSPoint)point {
+//    [super hitTest:point];
+//    
+//    return nil;
+//}
 
 - (void)setCursor {
     NSCursor *draggingCursor = [[NSCursor alloc] initWithImage:[NSImage imageNamed:DRAGGING_CURSOR] hotSpot:NSMakePoint(4.0, 4.0)];
