@@ -12,12 +12,10 @@
 #import <AppKit/NSDragging.h>
 
 @interface CustomTableView ()<NSDraggingDestination, NSTableViewDelegate, NSTableViewDataSource> {
-    CGFloat lineWidth;
     NSMutableArray<NSPasteboardType> *acceptableTypes;
     NSDictionary *filteringOptions;
     NSString *DRAGGING_CURSOR;
 }
-
 @property (nonatomic) BOOL isReceivingDrap;
 
 @end
@@ -26,32 +24,18 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    self.delegate = self;
-    self.dataSource = self;
     [self setup];
 }
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    if (self.isReceivingDrap) {
-        [[NSColor selectedControlTextColor] set];
-        
-        NSBezierPath *path = [NSBezierPath bezierPathWithRect:self.bounds];
-        path.lineWidth = lineWidth;
-        [path stroke];
-    }
-}
-
 - (void)setup {
-    lineWidth = 10.0;
+    self.delegate = self;
+    self.dataSource = self;
     self.wantsLayer = YES;
     self.layer.backgroundColor = [[NSColor purpleColor] CGColor];
     DRAGGING_CURSOR = @"mouse-2";
     filteringOptions = @{NSPasteboardURLReadingContentsConformToTypesKey: NSImage.imageTypes};
     acceptableTypes = [[NSMutableArray alloc] initWithArray:@[NSPasteboardTypeTIFF, NSPasteboardTypeURL]];
     [self registerForDraggedTypes:acceptableTypes];
-    [self setCursor];
 }
 
 - (BOOL)shouldAllowDrapWithDraggingInfo:(id<NSDraggingInfo>)info {
@@ -81,7 +65,7 @@
     // NSDragOperationCopy have an image, don't need to return this,
     BOOL allow = [self shouldAllowDrapWithDraggingInfo:sender];
     self.isReceivingDrap = allow;
-    return allow ? NSDragOperationCopy : NSDragOperationNone;
+    return allow ? NSDragOperationEvery : NSDragOperationNone;
 }
 
 - (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender {

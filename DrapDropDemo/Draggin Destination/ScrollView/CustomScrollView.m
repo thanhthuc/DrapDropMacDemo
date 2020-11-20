@@ -25,16 +25,8 @@
 @implementation CustomScrollView
 
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    if (self.isReceivingDrap) {
-        [[NSColor selectedControlTextColor] set];
-        
-        NSBezierPath *path = [NSBezierPath bezierPathWithRect:self.bounds];
-        path.lineWidth = lineWidth;
-        [path stroke];
-    }
-    
+- (void)awakeFromNib {
+    [super awakeFromNib];
     [self setup];
 }
 
@@ -49,7 +41,6 @@
     filteringOptions = @{NSPasteboardURLReadingContentsConformToTypesKey: NSImage.imageTypes};
     acceptableTypes = [[NSMutableArray alloc] initWithArray:@[NSPasteboardTypeTIFF, NSPasteboardTypeURL]];
     [self registerForDraggedTypes:acceptableTypes];
-    [self setCursor];
 }
 
 - (BOOL)shouldAllowDrapWithDraggingInfo:(id<NSDraggingInfo>)info {

@@ -43,10 +43,10 @@
         
         if ([WKWebView class]) {
             if (configuration) {
-                self.wkWebView = [[CustomWKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
+                self.wkWebView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
             }
             else {
-                self.wkWebView = [[CustomWKWebView alloc] init];
+                self.wkWebView = [[WKWebView alloc] init];
             }
         }
     }

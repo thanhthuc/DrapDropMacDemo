@@ -33,10 +33,12 @@
     //or return nil on hitTest function
 
 // 1b. Why web accept view when have a top view with alpha not equal to 0 => still research
+// 1c. Check webView event delegate
 
 // 2. refactor NSDragOperation:
     // Using owner Operation
     // Using owner Cursor
+    // Refactor until base view, consider base view or not
 // https://stackoverflow.com/questions/5146947/what-is-the-impact-of-view-alpha-0-vs-view-hidden-yes
 // Can not copy on twitter page sign up
 

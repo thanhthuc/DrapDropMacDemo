@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1E156D3725625C1E00D2DC0F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E156D3525625C1E00D2DC0F /* WebViewController.m */; };
 		1E156D3825625C1E00D2DC0F /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E156D3625625C1E00D2DC0F /* WebViewController.xib */; };
-		1E156D3B2562815200D2DC0F /* CustomWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E156D3A2562815100D2DC0F /* CustomWKWebView.m */; };
 		1E156D3E25628A7500D2DC0F /* TopBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E156D3D25628A7500D2DC0F /* TopBaseView.m */; };
 		1E4A6D6B2564FE41004CE60E /* CustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4A6D6A2564FE41004CE60E /* CustomTableView.m */; };
 		1E4A6D6F25650268004CE60E /* CustomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4A6D6E25650268004CE60E /* CustomScrollView.m */; };
@@ -25,14 +24,14 @@
 		1E5ACA2E255CF63500EFC582 /* RoundedRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA2C255CF63500EFC582 /* RoundedRectView.m */; };
 		1E5ACA32255D1D8500EFC582 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA31255D1D8500EFC582 /* Helper.m */; };
 		1E5ACA35255D237900EFC582 /* StickerBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA34255D237900EFC582 /* StickerBoardViewController.m */; };
+		1E8DD07F2567AFED0067E1A5 /* SourceDraggingAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8DD07E2567AFED0067E1A5 /* SourceDraggingAbstract.m */; };
+		1E8DD0822567B88C0067E1A5 /* DestinationDraggingAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8DD0812567B88C0067E1A5 /* DestinationDraggingAbstract.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1E156D3425625C1E00D2DC0F /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		1E156D3525625C1E00D2DC0F /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		1E156D3625625C1E00D2DC0F /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
-		1E156D392562815100D2DC0F /* CustomWKWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomWKWebView.h; sourceTree = "<group>"; };
-		1E156D3A2562815100D2DC0F /* CustomWKWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomWKWebView.m; sourceTree = "<group>"; };
 		1E156D3C25628A7500D2DC0F /* TopBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopBaseView.h; sourceTree = "<group>"; };
 		1E156D3D25628A7500D2DC0F /* TopBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopBaseView.m; sourceTree = "<group>"; };
 		1E4A6D692564FE41004CE60E /* CustomTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableView.h; sourceTree = "<group>"; };
@@ -62,6 +61,10 @@
 		1E5ACA31255D1D8500EFC582 /* Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		1E5ACA33255D237900EFC582 /* StickerBoardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StickerBoardViewController.h; sourceTree = "<group>"; };
 		1E5ACA34255D237900EFC582 /* StickerBoardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StickerBoardViewController.m; sourceTree = "<group>"; };
+		1E8DD07D2567AFED0067E1A5 /* SourceDraggingAbstract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceDraggingAbstract.h; sourceTree = "<group>"; };
+		1E8DD07E2567AFED0067E1A5 /* SourceDraggingAbstract.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceDraggingAbstract.m; sourceTree = "<group>"; };
+		1E8DD0802567B88C0067E1A5 /* DestinationDraggingAbstract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationDraggingAbstract.h; sourceTree = "<group>"; };
+		1E8DD0812567B88C0067E1A5 /* DestinationDraggingAbstract.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationDraggingAbstract.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +83,6 @@
 			children = (
 				1E156D3C25628A7500D2DC0F /* TopBaseView.h */,
 				1E156D3D25628A7500D2DC0F /* TopBaseView.m */,
-				1E156D392562815100D2DC0F /* CustomWKWebView.h */,
-				1E156D3A2562815100D2DC0F /* CustomWKWebView.m */,
 				1E156D3425625C1E00D2DC0F /* WebViewController.h */,
 				1E156D3525625C1E00D2DC0F /* WebViewController.m */,
 				1E156D3625625C1E00D2DC0F /* WebViewController.xib */,
@@ -138,6 +139,7 @@
 		1E5ACA05255CEB7200EFC582 /* DrapDropDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1E8DD07C2567AE4B0067E1A5 /* AbstractDrapOperation */,
 				1E5ACA1D255CF0D900EFC582 /* Others */,
 				1E5ACA1C255CF08E00EFC582 /* Drawing */,
 				1E5ACA1B255CF06100EFC582 /* Dragging Source */,
@@ -193,6 +195,17 @@
 				1E5ACA12255CEB7600EFC582 /* main.m */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		1E8DD07C2567AE4B0067E1A5 /* AbstractDrapOperation */ = {
+			isa = PBXGroup;
+			children = (
+				1E8DD07D2567AFED0067E1A5 /* SourceDraggingAbstract.h */,
+				1E8DD07E2567AFED0067E1A5 /* SourceDraggingAbstract.m */,
+				1E8DD0802567B88C0067E1A5 /* DestinationDraggingAbstract.h */,
+				1E8DD0812567B88C0067E1A5 /* DestinationDraggingAbstract.m */,
+			);
+			path = AbstractDrapOperation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5ACA25255CF55100EFC582 /* ImageSourceView.m in Sources */,
+				1E8DD0822567B88C0067E1A5 /* DestinationDraggingAbstract.m in Sources */,
 				1E156D3E25628A7500D2DC0F /* TopBaseView.m in Sources */,
 				1E4A6D6B2564FE41004CE60E /* CustomTableView.m in Sources */,
 				1E4A6D782565297F004CE60E /* UnderView.m in Sources */,
@@ -274,11 +288,11 @@
 				1E5ACA35255D237900EFC582 /* StickerBoardViewController.m in Sources */,
 				1E156D3725625C1E00D2DC0F /* WebViewController.m in Sources */,
 				1E5ACA2E255CF63500EFC582 /* RoundedRectView.m in Sources */,
-				1E156D3B2562815200D2DC0F /* CustomWKWebView.m in Sources */,
 				1E5ACA29255CF56100EFC582 /* ActionView.m in Sources */,
 				1E4A6D7425652937004CE60E /* TopViewControllerOnView.m in Sources */,
 				1E4A6D6F25650268004CE60E /* CustomScrollView.m in Sources */,
 				1E5ACA13255CEB7600EFC582 /* main.m in Sources */,
+				1E8DD07F2567AFED0067E1A5 /* SourceDraggingAbstract.m in Sources */,
 				1E5ACA08255CEB7200EFC582 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

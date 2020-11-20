@@ -21,7 +21,6 @@
 static CGFloat maxStickerDimension = 150.0;
 static float shadowOpacity =  0.4;
 static CGFloat shadowOffset = 4;
-static CGFloat imageCompressionFactor = 1.0;
 static UInt32 maxRotation = 12;
 static CGFloat rotationOffset = 6;
 static UInt32 randomNoise = 200;
@@ -31,8 +30,6 @@ static UInt32 randomNoise = 200;
     // Do view setup here.
 //    self.topViewLayerApp.delegate = self;
     [self configureShadow: self.topViewLayerApp];
-    _invitationLabel.hidden = NO;
-    _invitationLabel.stringValue = @"Let here a view";
     self.topViewLayerApp.wantsLayer = YES;
     self.topViewLayerApp.layer.backgroundColor = [[NSColor greenColor] CGColor];
     self.topViewLayerApp.alphaValue = 1.0;

@@ -11,11 +11,8 @@
 #import <AppKit/NSDragging.h>
 
 @interface TopBaseView ()<NSDraggingDestination> {
-    CGFloat lineWidth;
     NSMutableArray<NSPasteboardType> *acceptableTypes;
     NSDictionary *filteringOptions;
-    NSString *DEFAULT_CURSOR;
-    NSString *CLICKED_CURSOR;
     NSString *DRAGGING_CURSOR;
 }
 
@@ -25,36 +22,34 @@
 
 @implementation TopBaseView
 
-
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    if (self.isReceivingDrap) {
-        [[NSColor selectedControlTextColor] set];
-        
-        NSBezierPath *path = [NSBezierPath bezierPathWithRect:self.bounds];
-        path.lineWidth = lineWidth;
-        [path stroke];
+- (instancetype)initWithFrame:(NSRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setup];
     }
-    
-    self.layer.backgroundColor = [[NSColor purpleColor] CGColor];
-    [self setup];
+    return self;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self setup];
+    }
+    return self;
 }
 
 - (void)setup {
-    lineWidth = 10.0;
     self.wantsLayer = YES;
     self.layer.backgroundColor = [[NSColor purpleColor] CGColor];
     self.alphaValue = 0.5;
     
-    DEFAULT_CURSOR = @"unicorn-small";
-    CLICKED_CURSOR = @"ic_cursor_position";
     DRAGGING_CURSOR = @"ic_cursor_position";
-    
     
     filteringOptions = @{NSPasteboardURLReadingContentsConformToTypesKey: NSImage.imageTypes};
     acceptableTypes = [[NSMutableArray alloc] initWithArray:@[NSPasteboardTypeTIFF, NSPasteboardTypeURL]];
     [self registerForDraggedTypes:acceptableTypes];
-    [self setCursor];
 }
 
 - (BOOL)shouldAllowDrapWithDraggingInfo:(id<NSDraggingInfo>)info {
@@ -80,11 +75,9 @@
 }
 
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
-    // NOTE:
-    
     BOOL allow = [self shouldAllowDrapWithDraggingInfo:sender];
     self.isReceivingDrap = allow;
-    return allow ? NSDragOperationCopy : NSDragOperationNone;
+    return allow ? NSDragOperationGeneric : NSDragOperationNone;
 }
 
 - (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender {
@@ -93,8 +86,6 @@
 }
 
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender {
-    //NOTE
-    
     self.isReceivingDrap = NO;
     NSPasteboard *pasteBoard = [sender draggingPasteboard];
 

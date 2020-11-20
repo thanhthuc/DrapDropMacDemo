@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface StickerBoardViewController : NSViewController<WKNavigationDelegate, WKUIDelegate>
 
-@property (weak) IBOutlet NSTextField *invitationLabel;
 @property (weak) IBOutlet NSView *topViewLayerApp;
 @property (weak) IBOutlet UnderView *underView;
 

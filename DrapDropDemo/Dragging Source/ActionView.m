@@ -27,16 +27,6 @@
     self.wantsLayer = YES;
     self.layer.cornerRadius = 10.0;
     self.layer.backgroundColor = [[NSColor purpleColor] CGColor];
-}
-
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    if (self.isReceivingDrap) {
-        [[NSColor selectedControlTextColor] set];
-        NSBezierPath *path = [NSBezierPath bezierPathWithRect:self.bounds];
-        path.lineWidth = lineWidth;
-        [path stroke];
-    }
     [self setup];
 }
 
@@ -47,7 +37,6 @@
     filteringOptions = @{NSPasteboardURLReadingContentsConformToTypesKey: NSImage.imageTypes};
     acceptableTypes = [[NSMutableArray alloc] initWithArray:@[NSPasteboardTypeTIFF, NSPasteboardTypeURL]];
     [self registerForDraggedTypes:acceptableTypes];
-    [self setCursor];
 }
 
 - (BOOL)shouldAllowDrapWithDraggingInfo:(id<NSDraggingInfo>)info {
@@ -77,7 +66,7 @@
     
     BOOL allow = [self shouldAllowDrapWithDraggingInfo:sender];
     self.isReceivingDrap = allow;
-    return allow ? NSDragOperationCopy : NSDragOperationNone;
+    return allow ? NSDragOperationGeneric : NSDragOperationNone;
 }
 
 - (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender {

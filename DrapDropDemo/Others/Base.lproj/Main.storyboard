@@ -780,6 +780,14 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="eGD-OH-IAW" customClass="ActionView">
                                 <rect key="frame" x="447" y="50" width="200" height="240"/>
                                 <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1OI-RK-ZD2">
+                                        <rect key="frame" x="72" y="112" width="57" height="16"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sparkles" id="CkL-17-vSL">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aEd-yP-E8a">
                                         <rect key="frame" x="52" y="13" width="96" height="32"/>
                                         <buttonCell key="cell" type="push" title="Open tab" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hXJ-U9-T7o">
@@ -793,6 +801,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="0jA-fB-Bsr"/>
+                                    <constraint firstItem="1OI-RK-ZD2" firstAttribute="centerX" secondItem="eGD-OH-IAW" secondAttribute="centerX" id="3YF-5G-CHV"/>
+                                    <constraint firstItem="1OI-RK-ZD2" firstAttribute="centerY" secondItem="eGD-OH-IAW" secondAttribute="centerY" id="Zjn-nj-u0n"/>
                                     <constraint firstItem="aEd-yP-E8a" firstAttribute="centerX" secondItem="eGD-OH-IAW" secondAttribute="centerX" id="pbD-T8-OxC"/>
                                     <constraint firstAttribute="bottom" secondItem="aEd-yP-E8a" secondAttribute="bottom" constant="20" id="w54-MZ-9BN"/>
                                 </constraints>
@@ -850,7 +860,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="CellName" id="pBW-W9-dkt">
+                                                        <tableCellView id="pBW-W9-dkt">
                                                             <rect key="frame" x="1" y="1" width="195" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>

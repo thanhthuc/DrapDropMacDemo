@@ -22,6 +22,4 @@
     self.view.layer.backgroundColor = [[NSColor greenColor] CGColor];
 }
 
-
-
 @end

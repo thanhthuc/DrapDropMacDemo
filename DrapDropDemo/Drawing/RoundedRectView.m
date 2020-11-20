@@ -16,7 +16,6 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setup];
-    
 }
 
 - (void)drawRect:(NSRect)dirtyRect {

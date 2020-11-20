@@ -84,15 +84,15 @@
     //NOTE
     
     self.isReceivingDrap = NO;
-    NSPasteboard *pasteBoard = [sender draggingPasteboard];
-    
-    // Get point from source sender
-    NSPoint point = [self convertPoint:[sender draggingLocation] fromView:nil];
-    
-    // Read url from soure image url
-    NSArray *urls = [pasteBoard readObjectsForClasses:@[NSURL.self] options:filteringOptions];
-    
-    NSImage *image = [[NSImage alloc] initWithPasteboard:pasteBoard];
+//    NSPasteboard *pasteBoard = [sender draggingPasteboard];
+//
+//    // Get point from source sender
+//    NSPoint point = [self convertPoint:[sender draggingLocation] fromView:nil];
+//
+//    // Read url from soure image url
+//    NSArray *urls = [pasteBoard readObjectsForClasses:@[NSURL.self] options:filteringOptions];
+//
+//    NSImage *image = [[NSImage alloc] initWithPasteboard:pasteBoard];
 //    if (urls.count >0) {
 //        [self.delegate processImageURLs:urls center:point];
 //        return YES;

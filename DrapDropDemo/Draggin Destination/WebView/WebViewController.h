@@ -8,12 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
-#import "CustomWKWebView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WebViewController : NSViewController
-@property (nonatomic, strong) CustomWKWebView *wkWebView;
+@property (nonatomic, strong) WKWebView *wkWebView;
 + (WebViewController *)webBrowserWithConfiguration:(WKWebViewConfiguration *)configuration;
 + (WebViewController *)webBrowser;
 - (void)loadURLString:(NSString *)URLString;

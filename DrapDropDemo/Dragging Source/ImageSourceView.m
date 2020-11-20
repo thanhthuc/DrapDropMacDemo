@@ -13,7 +13,6 @@
 
 @interface ImageSourceView (){
     NSString *DRAGGING_CURSOR;
-    
     NSMutableArray<NSPasteboardType> *acceptableTypes;
     NSDictionary *filteringOptions;
 }
@@ -31,14 +30,7 @@
     [self setCursor];
 }
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    NSLog(@"Set Cursor");
-    [self setCursor];
-}
-
 - (NSDragOperation)draggingSession:(NSDraggingSession *)session sourceOperationMaskForDraggingContext:(NSDraggingContext)context {
-    
     return NSDragOperationGeneric;
 }
 
@@ -52,7 +44,6 @@
 
 // Same
 - (void)mouseDragged:(NSEvent *)event {
-    
     NSLog(@"Set cursor in mouse dragging");
     [self setCursor];
     NSPasteboardItem *pasteBoardItem = [[NSPasteboardItem alloc] init];
@@ -87,7 +78,6 @@
 - (void)mouseMoved:(NSEvent *)event {
     NSLog(@"mouse moved");
 }
-
 
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
     [self setCursor];
