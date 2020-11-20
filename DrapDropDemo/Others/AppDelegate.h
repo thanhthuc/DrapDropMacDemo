@@ -27,8 +27,20 @@
  10. Cover all case NSOperation Drap in Flo app
  */
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+// New question:
+// 1. webView event have effect when have top view or not: answer:
+    //because webView is not respond when have event mouse,
+    //or return nil on hitTest function
 
+// 1b. Why web accept view when have a top view with alpha not equal to 0 => still research
+
+// 2. refactor NSDragOperation:
+    // Using owner Operation
+    // Using owner Cursor
+// https://stackoverflow.com/questions/5146947/what-is-the-impact-of-view-alpha-0-vs-view-hidden-yes
+// Can not copy on twitter page sign up
+
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @end
 

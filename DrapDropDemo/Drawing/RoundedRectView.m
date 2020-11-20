@@ -8,10 +8,7 @@
 
 #import "RoundedRectView.h"
 
-@interface RoundedRectView () {
-    CGFloat radius;
-}
-
+@interface RoundedRectView ()
 @end
 
 @implementation RoundedRectView
@@ -24,14 +21,9 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-//    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:NSInsetRect(self.bounds, radius, radius) xRadius:radius yRadius:radius];
-//    [[NSColor whiteColor] set];
-//    [path fill];
-    
 }
 
 - (void)setup {
-//    radius = 10.0;
     self.wantsLayer = YES;
     self.layer.cornerRadius = 3;
     self.layer.borderWidth = 3.0;

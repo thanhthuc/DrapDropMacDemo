@@ -1,17 +1,17 @@
 //
-//  AppActionSourceView.m
+//  ActionView.m
 //  DrapDropDemo
 //
 //  Created by Thuc Nguyen on 11/12/20.
 //  Copyright © 2020 Thuc Nguyen. All rights reserved.
 //
 
-#import "AppActionSourceView.h"
+#import "ActionView.h"
 
 #import <AppKit/NSPasteboard.h>
 #import <AppKit/NSDragging.h>
 
-@interface AppActionSourceView (){
+@interface ActionView (){
     CGFloat lineWidth;
     NSMutableArray<NSPasteboardType> *acceptableTypes;
     NSDictionary *filteringOptions;
@@ -20,7 +20,7 @@
 @property (nonatomic) BOOL isReceivingDrap;
 @end
 
-@implementation AppActionSourceView
+@implementation ActionView
 
 - (void)awakeFromNib {
     [super awakeFromNib];

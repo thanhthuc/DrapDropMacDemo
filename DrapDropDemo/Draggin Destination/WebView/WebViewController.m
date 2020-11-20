@@ -62,27 +62,6 @@
 
 - (void)viewWillAppear {
     [super viewWillAppear];
-    TopBaseView *topBaseView = [[TopBaseView alloc] init];
-    [self.view addSubview:topBaseView];
-    [self addAutoResizingView:topBaseView toView:self.view];
-}
-
-- (void)addAutoResizingView:(NSView *)containerView toView:(NSView *)toView
-{
-    if (containerView != nil)
-    {
-        [toView addSubview:containerView];
-        
-        [containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        
-        [toView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[containerView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(containerView)]];
-        [toView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[containerView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(containerView)]];
-        
-        // Should force update view constraints for update UI correctly.
-        // [FM-1270] Show flashing for Flo app when open with Compact mode.
-        [toView layoutSubtreeIfNeeded];
-        [toView.superview layoutSubtreeIfNeeded];
-    }
 }
 
 - (void)loadURL:(NSURL *)URL {

@@ -11,8 +11,9 @@
 #import "TopViewControllerOnView.h"
 
 
-@interface StickerBoardViewController ()<DestinationViewDelegate>
+@interface StickerBoardViewController ()<TopBaseViewDelegate>
 @property (nonatomic, strong) WebViewController *webViewVC;
+@property (nonatomic, strong) TopBaseView *topBaseView;
 @end
 
 @implementation StickerBoardViewController
@@ -28,42 +29,33 @@ static UInt32 randomNoise = 200;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-//    self.topLayer.delegate = self;
-//    [self configureShadow: self.targetLayer];
+//    self.topViewLayerApp.delegate = self;
+    [self configureShadow: self.topViewLayerApp];
     _invitationLabel.hidden = NO;
     _invitationLabel.stringValue = @"Let here a view";
     self.topViewLayerApp.wantsLayer = YES;
     self.topViewLayerApp.layer.backgroundColor = [[NSColor greenColor] CGColor];
     self.topViewLayerApp.alphaValue = 1.0;
+    
     [self configTopViewWeb];
     
     [self configUnderView];
     
+    [self configTopBaseViewOnWebView];
 }
 
 
 - (void)activeViewController: (NSViewController *)vc toContainer: (NSView *)containerView {
     vc.view.frame = containerView.bounds;
     [vc.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self addAutoResizingView:vc.view toView:containerView];
+    [[Helper sharedInstance] addAutoResizingView:vc.view toView:containerView];
 }
 
-- (void)addAutoResizingView:(NSView *)containerView toView:(NSView *)toView
-{
-    if (containerView != nil)
-    {
-        [toView addSubview:containerView];
-        
-        [containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        
-        [toView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[containerView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(containerView)]];
-        [toView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[containerView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(containerView)]];
-        
-        // Should force update view constraints for update UI correctly.
-        // [FM-1270] Show flashing for Flo app when open with Compact mode.
-        [toView layoutSubtreeIfNeeded];
-        [toView.superview layoutSubtreeIfNeeded];
-    }
+- (void)configTopBaseViewOnWebView {
+    self.topBaseView = [[TopBaseView alloc] init];
+       self.topBaseView.delegate = self;
+       [self.webViewVC.view addSubview:self.topBaseView];
+       [[Helper sharedInstance] addAutoResizingView:self.topBaseView toView:self.webViewVC.view];
 }
 
 - (void)configTopViewWeb {
@@ -92,42 +84,15 @@ static UInt32 randomNoise = 200;
 
 - (IBAction)saveAction:(id)sender {
     
-//    NSImage *imageSnapshot = [[Helper sharedInstance] snapshotWithView:self.targetLayer];
-//    NSData *tiffData = [imageSnapshot TIFFRepresentation];
-//    if (tiffData == nil) {
-//        return;
-//    }
-//    NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithData:tiffData];
-//
-//    NSDictionary *props = @{NSImageCompressionFactor: [NSNumber numberWithFloat:imageCompressionFactor]};
-//    NSData *bitmapData = [NSBitmapImageRep representationOfImageRepsInArray:@[bitmapRep] usingType:NSBitmapImageFileTypeJPEG properties:props];
-//
-//    if (bitmapData == nil) { return; }
-//
-//    NSString *path = @"~/Desktop/StickerDrag.jpg";
-//    NSString *resolvedPath = [path stringByExpandingTildeInPath];
-//    @try {
-//        BOOL result = [bitmapData writeToURL: [[NSURL alloc] initFileURLWithPath:resolvedPath] atomically:NO];
-//        if (result) {
-//            NSLog(@"Your image has been saved to \(resolvedPath), why not tweet it to us at @raywenderlich #stickerdrag");
-//        } else {
-//            NSLog(@"Fail to write to file");
-//        }
-//    } @catch (NSException *exception) {
-//        NSLog(@"Fail to write to file with exception: %@", exception.description);
-//    } @finally { }
 }
 
 - (void)processImage:(NSImage *)image center:(NSPoint)center {
-    
-//    self.invitationLabel.hidden = YES;
-//
     NSSize constrainedSize = [[Helper sharedInstance] aspectFitSizeForMaxDimensionWithImage:image maxDimension:maxStickerDimension];
 
     NSImageView *subView = [[NSImageView alloc] initWithFrame:NSMakeRect(center.x - constrainedSize.width/2, center.y - constrainedSize.height/2, constrainedSize.width, constrainedSize.height)];
 
     subView.image = image;
-    [self.topViewLayerApp addSubview:subView];
+    [self.topBaseView addSubview:subView];
 
     CGFloat maxrotation = (CGFloat)(arc4random_uniform(maxRotation)) - rotationOffset;
     subView.frameCenterRotation = maxrotation;

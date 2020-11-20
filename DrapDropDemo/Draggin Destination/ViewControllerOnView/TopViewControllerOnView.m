@@ -19,7 +19,7 @@
     // Do view setup here.
     self.view.wantsLayer = YES;
     self.view.alphaValue = 0.5;
-    self.view.layer.backgroundColor = [[NSColor orangeColor] CGColor];
+    self.view.layer.backgroundColor = [[NSColor greenColor] CGColor];
 }
 
 

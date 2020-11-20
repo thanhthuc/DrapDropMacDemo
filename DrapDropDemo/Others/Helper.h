@@ -36,6 +36,8 @@ Mutate an NSPoint with a random amount of noise bounded by maximumDelta
 
 - (NSColor *)randomColor;
 
+- (void)addAutoResizingView:(NSView *)containerView toView:(NSView *)toView;
+
 @end
 NS_ASSUME_NONNULL_END
 

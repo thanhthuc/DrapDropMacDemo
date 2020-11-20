@@ -121,7 +121,7 @@
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     NSTableCellView *view = (NSTableCellView *)[tableView makeViewWithIdentifier:@"CellName" owner:self];
-    view.textField.stringValue = @"TableViewCell TableViewCell";
+    view.textField.stringValue = @"TableViewCell TableViewCell TEST";
     return view;
 }
 @end

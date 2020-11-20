@@ -44,7 +44,7 @@
     lineWidth = 10.0;
     self.wantsLayer = YES;
     self.layer.backgroundColor = [[NSColor purpleColor] CGColor];
-    self.alphaValue = 0.0;
+    self.alphaValue = 0.5;
     
     DEFAULT_CURSOR = @"unicorn-small";
     CLICKED_CURSOR = @"ic_cursor_position";
@@ -97,21 +97,21 @@
     
     self.isReceivingDrap = NO;
     NSPasteboard *pasteBoard = [sender draggingPasteboard];
-    
+
     // Get point from source sender
     NSPoint point = [self convertPoint:[sender draggingLocation] fromView:nil];
-    
+
     // Read url from soure image url
     NSArray *urls = [pasteBoard readObjectsForClasses:@[NSURL.self] options:filteringOptions];
-    
+
     NSImage *image = [[NSImage alloc] initWithPasteboard:pasteBoard];
-//    if (urls.count >0) {
-//        [self.delegate processImageURLs:urls center:point];
-//        return YES;
-//    }
-//    else if (image != nil) {
-//        [self.delegate processImage:image center:point];
-//    }
+    if (urls.count >0) {
+        [self.delegate processImageURLs:urls center:point];
+        return YES;
+    }
+    else if (image != nil) {
+        [self.delegate processImage:image center:point];
+    }
     return NO;
 }
 

@@ -20,9 +20,8 @@
 		1E5ACA0D255CEB7600EFC582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E5ACA0C255CEB7600EFC582 /* Assets.xcassets */; };
 		1E5ACA10255CEB7600EFC582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E5ACA0E255CEB7600EFC582 /* Main.storyboard */; };
 		1E5ACA13255CEB7600EFC582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA12255CEB7600EFC582 /* main.m */; };
-		1E5ACA21255CF3E700EFC582 /* DestinationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA1F255CF3E700EFC582 /* DestinationView.m */; };
 		1E5ACA25255CF55100EFC582 /* ImageSourceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA24255CF55100EFC582 /* ImageSourceView.m */; };
-		1E5ACA29255CF56100EFC582 /* AppActionSourceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA27255CF56100EFC582 /* AppActionSourceView.m */; };
+		1E5ACA29255CF56100EFC582 /* ActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA27255CF56100EFC582 /* ActionView.m */; };
 		1E5ACA2E255CF63500EFC582 /* RoundedRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA2C255CF63500EFC582 /* RoundedRectView.m */; };
 		1E5ACA32255D1D8500EFC582 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA31255D1D8500EFC582 /* Helper.m */; };
 		1E5ACA35255D237900EFC582 /* StickerBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA34255D237900EFC582 /* StickerBoardViewController.m */; };
@@ -53,12 +52,10 @@
 		1E5ACA11255CEB7600EFC582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E5ACA12255CEB7600EFC582 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E5ACA14255CEB7600EFC582 /* DrapDropDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrapDropDemo.entitlements; sourceTree = "<group>"; };
-		1E5ACA1E255CF3E700EFC582 /* DestinationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationView.h; sourceTree = "<group>"; };
-		1E5ACA1F255CF3E700EFC582 /* DestinationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationView.m; sourceTree = "<group>"; };
 		1E5ACA23255CF55100EFC582 /* ImageSourceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageSourceView.h; sourceTree = "<group>"; };
 		1E5ACA24255CF55100EFC582 /* ImageSourceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageSourceView.m; sourceTree = "<group>"; };
-		1E5ACA26255CF56100EFC582 /* AppActionSourceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppActionSourceView.h; sourceTree = "<group>"; };
-		1E5ACA27255CF56100EFC582 /* AppActionSourceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppActionSourceView.m; sourceTree = "<group>"; };
+		1E5ACA26255CF56100EFC582 /* ActionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionView.h; sourceTree = "<group>"; };
+		1E5ACA27255CF56100EFC582 /* ActionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionView.m; sourceTree = "<group>"; };
 		1E5ACA2B255CF63500EFC582 /* RoundedRectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedRectView.h; sourceTree = "<group>"; };
 		1E5ACA2C255CF63500EFC582 /* RoundedRectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedRectView.m; sourceTree = "<group>"; };
 		1E5ACA30255D1D8500EFC582 /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
@@ -157,8 +154,6 @@
 				1E4A6D6C25650251004CE60E /* ScrollView */,
 				1E4A6D682564FE05004CE60E /* TableView */,
 				1E4A6D672564FDFA004CE60E /* WebView */,
-				1E5ACA1E255CF3E700EFC582 /* DestinationView.h */,
-				1E5ACA1F255CF3E700EFC582 /* DestinationView.m */,
 				1E5ACA33255D237900EFC582 /* StickerBoardViewController.h */,
 				1E5ACA34255D237900EFC582 /* StickerBoardViewController.m */,
 			);
@@ -170,8 +165,8 @@
 			children = (
 				1E5ACA23255CF55100EFC582 /* ImageSourceView.h */,
 				1E5ACA24255CF55100EFC582 /* ImageSourceView.m */,
-				1E5ACA26255CF56100EFC582 /* AppActionSourceView.h */,
-				1E5ACA27255CF56100EFC582 /* AppActionSourceView.m */,
+				1E5ACA26255CF56100EFC582 /* ActionView.h */,
+				1E5ACA27255CF56100EFC582 /* ActionView.m */,
 			);
 			path = "Dragging Source";
 			sourceTree = "<group>";
@@ -274,14 +269,13 @@
 				1E5ACA25255CF55100EFC582 /* ImageSourceView.m in Sources */,
 				1E156D3E25628A7500D2DC0F /* TopBaseView.m in Sources */,
 				1E4A6D6B2564FE41004CE60E /* CustomTableView.m in Sources */,
-				1E5ACA21255CF3E700EFC582 /* DestinationView.m in Sources */,
 				1E4A6D782565297F004CE60E /* UnderView.m in Sources */,
 				1E5ACA32255D1D8500EFC582 /* Helper.m in Sources */,
 				1E5ACA35255D237900EFC582 /* StickerBoardViewController.m in Sources */,
 				1E156D3725625C1E00D2DC0F /* WebViewController.m in Sources */,
 				1E5ACA2E255CF63500EFC582 /* RoundedRectView.m in Sources */,
 				1E156D3B2562815200D2DC0F /* CustomWKWebView.m in Sources */,
-				1E5ACA29255CF56100EFC582 /* AppActionSourceView.m in Sources */,
+				1E5ACA29255CF56100EFC582 /* ActionView.m in Sources */,
 				1E4A6D7425652937004CE60E /* TopViewControllerOnView.m in Sources */,
 				1E4A6D6F25650268004CE60E /* CustomScrollView.m in Sources */,
 				1E5ACA13255CEB7600EFC582 /* main.m in Sources */,

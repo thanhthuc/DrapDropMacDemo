@@ -1,5 +1,5 @@
 //
-//  AppActionSourceView.h
+//  ActionView.h
 //  DrapDropDemo
 //
 //  Created by Thuc Nguyen on 11/12/20.
@@ -10,7 +10,7 @@
 #import "RoundedRectView.h"
 
 NS_ASSUME_NONNULL_BEGIN
-@interface AppActionSourceView : NSView
+@interface ActionView : NSView
 
 @end
 
