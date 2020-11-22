@@ -62,8 +62,6 @@
 }
 
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
-    // NOTE:
-    
     BOOL allow = [self shouldAllowDrapWithDraggingInfo:sender];
     self.isReceivingDrap = allow;
     return allow ? NSDragOperationGeneric : NSDragOperationNone;

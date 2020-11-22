@@ -25,7 +25,7 @@
 		1E5ACA32255D1D8500EFC582 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA31255D1D8500EFC582 /* Helper.m */; };
 		1E5ACA35255D237900EFC582 /* StickerBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5ACA34255D237900EFC582 /* StickerBoardViewController.m */; };
 		1E8DD07F2567AFED0067E1A5 /* SourceDraggingAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8DD07E2567AFED0067E1A5 /* SourceDraggingAbstract.m */; };
-		1E8DD0822567B88C0067E1A5 /* DestinationDraggingAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8DD0812567B88C0067E1A5 /* DestinationDraggingAbstract.m */; };
+		1E8DD0822567B88C0067E1A5 /* CustomDestinationDragging.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8DD0812567B88C0067E1A5 /* CustomDestinationDragging.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,8 +63,9 @@
 		1E5ACA34255D237900EFC582 /* StickerBoardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StickerBoardViewController.m; sourceTree = "<group>"; };
 		1E8DD07D2567AFED0067E1A5 /* SourceDraggingAbstract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceDraggingAbstract.h; sourceTree = "<group>"; };
 		1E8DD07E2567AFED0067E1A5 /* SourceDraggingAbstract.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceDraggingAbstract.m; sourceTree = "<group>"; };
-		1E8DD0802567B88C0067E1A5 /* DestinationDraggingAbstract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationDraggingAbstract.h; sourceTree = "<group>"; };
-		1E8DD0812567B88C0067E1A5 /* DestinationDraggingAbstract.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationDraggingAbstract.m; sourceTree = "<group>"; };
+		1E8DD0802567B88C0067E1A5 /* CustomDestinationDragging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDestinationDragging.h; sourceTree = "<group>"; };
+		1E8DD0812567B88C0067E1A5 /* CustomDestinationDragging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDestinationDragging.m; sourceTree = "<group>"; };
+		1E8DD0832567C31E0067E1A5 /* CustomDestinationDraggingProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDestinationDraggingProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,8 +203,9 @@
 			children = (
 				1E8DD07D2567AFED0067E1A5 /* SourceDraggingAbstract.h */,
 				1E8DD07E2567AFED0067E1A5 /* SourceDraggingAbstract.m */,
-				1E8DD0802567B88C0067E1A5 /* DestinationDraggingAbstract.h */,
-				1E8DD0812567B88C0067E1A5 /* DestinationDraggingAbstract.m */,
+				1E8DD0802567B88C0067E1A5 /* CustomDestinationDragging.h */,
+				1E8DD0812567B88C0067E1A5 /* CustomDestinationDragging.m */,
+				1E8DD0832567C31E0067E1A5 /* CustomDestinationDraggingProtocol.h */,
 			);
 			path = AbstractDrapOperation;
 			sourceTree = "<group>";
@@ -280,7 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5ACA25255CF55100EFC582 /* ImageSourceView.m in Sources */,
-				1E8DD0822567B88C0067E1A5 /* DestinationDraggingAbstract.m in Sources */,
+				1E8DD0822567B88C0067E1A5 /* CustomDestinationDragging.m in Sources */,
 				1E156D3E25628A7500D2DC0F /* TopBaseView.m in Sources */,
 				1E4A6D6B2564FE41004CE60E /* CustomTableView.m in Sources */,
 				1E4A6D782565297F004CE60E /* UnderView.m in Sources */,
