@@ -23,14 +23,17 @@ typedef NS_OPTIONS(NSUInteger, CustomEnumDragOperation) {
     CustomDragOperationEvery    = NSUIntegerMax,
 };
 
-
-
+typedef NS_OPTIONS(NSUInteger, ValidDrapOperation) {
+    CustomDragOperationAllow    = 0,
+     CustomDragOperationDonAllow = 1,
+     CustomDrapOperationStart = 2,
+};
 
 
 @protocol CustomDestinationDraggingProtocol <NSObject>
 @optional
-- (NSDragOperation)customDraggingEntered:(id <NSDraggingInfo>_Nonnull)sender;
-- (NSDragOperation)customDraggingUpdated:(id <NSDraggingInfo>_Nonnull)sender; /* if the destination responded to draggingEntered: but not to draggingUpdated: the return value from draggingEntered: is used */
+- (CustomEnumDragOperation)customDraggingEntered:(id <NSDraggingInfo>_Nonnull)sender;
+- (CustomEnumDragOperation)customDraggingUpdated:(id <NSDraggingInfo>_Nonnull)sender; /* if the destination responded to draggingEntered: but not to draggingUpdated: the return value from draggingEntered: is used */
 - (void)customDraggingExited:(nullable id <NSDraggingInfo>)sender;
 - (BOOL)customPrepareForDragOperation:(id <NSDraggingInfo>_Nonnull)sender;
 - (BOOL)customPerformDragOperation:(id <NSDraggingInfo>_Nonnull)sender;
@@ -44,7 +47,7 @@ typedef NS_OPTIONS(NSUInteger, CustomEnumDragOperation) {
  */
 - (void)customUpdateDraggingItemsForDrag:(nullable id <NSDraggingInfo>)sender API_AVAILABLE(macos(10.7));
 
- @end
+@end
 
 
 #endif /* CustomDraggingDestination_h */

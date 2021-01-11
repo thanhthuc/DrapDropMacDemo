@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.3"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -789,7 +790,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aEd-yP-E8a">
-                                        <rect key="frame" x="52" y="13" width="96" height="32"/>
+                                        <rect key="frame" x="55" y="13" width="90" height="32"/>
                                         <buttonCell key="cell" type="push" title="Open tab" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hXJ-U9-T7o">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -826,7 +827,7 @@
                                 </constraints>
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KnT-WZ-xXV">
-                                <rect key="frame" x="441" y="2" width="180" height="32"/>
+                                <rect key="frame" x="440" y="2" width="174" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save image to Desktop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cUs-id-oh6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -838,17 +839,17 @@
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ8-7c-fuS">
                                 <rect key="frame" x="239" y="50" width="200" height="240"/>
                                 <clipView key="contentView" ambiguous="YES" id="PEE-vM-aez">
-                                    <rect key="frame" x="1" y="0.0" width="198" height="239"/>
+                                    <rect key="frame" x="1" y="1" width="198" height="238"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" rowHeight="24" rowSizeStyle="systemDefault" headerView="MgE-eA-tSs" viewBased="YES" id="xWE-06-G1M" customClass="CustomTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="198" height="214"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="198" height="213"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="CellName" width="195" minWidth="40" maxWidth="1000" id="1Kp-LE-Ip3">
+                                                <tableColumn identifier="CellName" width="186" minWidth="40" maxWidth="1000" id="1Kp-LE-Ip3">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -906,7 +907,7 @@
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <tableHeaderView key="headerView" id="MgE-eA-tSs">
+                                <tableHeaderView key="headerView" wantsLayer="YES" id="MgE-eA-tSs">
                                     <rect key="frame" x="0.0" y="0.0" width="198" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>

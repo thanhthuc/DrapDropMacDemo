@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CustomDestinationDraggingProtocol.h"
+#import "BaseDrapDropableView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,11 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface TopBaseView : NSView
+@interface TopBaseView : NSView<CustomDestinationDraggingProtocol>
 @property (nonatomic, weak) id<TopBaseViewDelegate> delegate;
 @end
-
-
 
 
 NS_ASSUME_NONNULL_END

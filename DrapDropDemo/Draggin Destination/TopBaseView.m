@@ -10,7 +10,7 @@
 #import <AppKit/NSPasteboard.h>
 #import <AppKit/NSDragging.h>
 
-@interface TopBaseView ()<NSDraggingDestination> {
+@interface TopBaseView () {
     NSMutableArray<NSPasteboardType> *acceptableTypes;
     NSDictionary *filteringOptions;
     NSString *DRAGGING_CURSOR;
@@ -47,9 +47,9 @@
     
     DRAGGING_CURSOR = @"ic_cursor_position";
     
-    filteringOptions = @{NSPasteboardURLReadingContentsConformToTypesKey: NSImage.imageTypes};
-    acceptableTypes = [[NSMutableArray alloc] initWithArray:@[NSPasteboardTypeTIFF, NSPasteboardTypeURL]];
-    [self registerForDraggedTypes:acceptableTypes];
+   filteringOptions = @{NSPasteboardURLReadingContentsConformToTypesKey: NSImage.imageTypes};
+   acceptableTypes = [[NSMutableArray alloc] initWithArray:@[NSPasteboardTypeTIFF, NSPasteboardTypeURL]];
+   [self registerForDraggedTypes:acceptableTypes];
 }
 
 - (BOOL)shouldAllowDrapWithDraggingInfo:(id<NSDraggingInfo>)info {
@@ -118,8 +118,9 @@
        NSCursor *draggingCursor = [[NSCursor alloc] initWithImage:[NSImage imageNamed:@"star"] hotSpot:NSMakePoint(4.0, 4.0)];
         [draggingCursor set];
     }
-    
 }
+
+
 
 //- (void)mouseDown:(NSEvent *)event{
 //    NSLog(@"Mouse down");

@@ -65,7 +65,11 @@
     // NSDragOperationCopy have an image, don't need to return this,
     BOOL allow = [self shouldAllowDrapWithDraggingInfo:sender];
     self.isReceivingDrap = allow;
-    return allow ? NSDragOperationEvery : NSDragOperationNone;
+    
+    if (allow) {
+        return NSDragOperationGeneric;
+    }
+    return NSDragOperationNone;
 }
 
 - (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender {
